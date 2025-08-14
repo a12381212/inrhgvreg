@@ -22,7 +22,7 @@ const ResultModal: React.FC<ResultModalProps> = ({ isOpen, onClose, keyCode }) =
 
     if (!isOpen) return null;
 
-    const telegramLink = `https://t.me/hosein_mahmoodi32bot?text=${encodeURIComponent(keyCode)}`;
+    const telegramLink = `https://t.me/hosein_mahmoodi32bot?start=${encodeURIComponent(keyCode)}`;
 
     return (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
@@ -65,7 +65,7 @@ const ResultModal: React.FC<ResultModalProps> = ({ isOpen, onClose, keyCode }) =
                             className="flex items-center justify-center gap-2 w-full p-3 rounded-lg font-semibold transition bg-blue-500 text-white hover:bg-blue-600"
                             title="ارسال به تلگرام"
                         >
-                            <TelegramIcon className="w-5 h-5" />
+                            <TelegramIcon />
                             <span>ارسال کلید نهایی</span>
                         </a>
                     </div>

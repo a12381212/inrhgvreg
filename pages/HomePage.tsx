@@ -71,11 +71,11 @@ const HomePage: React.FC = () => {
         });
     };
 
-    const telegramLink = questionBookletCode ? `https://t.me/hosein_mahmoodi32bot?text=${encodeURIComponent(questionBookletCode)}` : '#';
+    const telegramLink = questionBookletCode ? `https://t.me/hosein_mahmoodi32bot?start=${encodeURIComponent(questionBookletCode)}` : '#';
 
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-50 py-12 px-4">
-            <div className="w-full max-w-xl p-8 space-y-6 bg-white rounded-2xl shadow-lg">
+            <div className="w-full max-w-xl p-6 sm:p-8 space-y-6 bg-white rounded-2xl shadow-lg">
                 <div className="text-center">
                     <h1 className="text-3xl font-bold text-gray-900">ورود به آزمون</h1>
                     <p className="mt-2 text-sm text-gray-600">برای شروع، اطلاعات زیر را کامل کنید.</p>
@@ -138,7 +138,7 @@ const HomePage: React.FC = () => {
                             aria-disabled={!questionBookletCode}
                             onClick={(e) => !questionBookletCode && e.preventDefault()}
                         >
-                            <TelegramIcon className="w-5 h-5" />
+                            <TelegramIcon />
                             <span>ارسال کد دفترچه سوال</span>
                         </a>
                     </div>
