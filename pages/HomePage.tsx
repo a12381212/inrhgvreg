@@ -118,23 +118,29 @@ const HomePage: React.FC = () => {
                             >
                                 <CopyIcon className="w-6 h-6 text-gray-600" />
                             </button>
-                            <a
-                                href={telegramLink}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={`p-3 rounded-lg transition ${
-                                    !questionBookletCode
-                                    ? 'bg-blue-300 opacity-50 cursor-not-allowed pointer-events-none'
-                                    : 'bg-blue-500 text-white hover:bg-blue-600'
-                                }`}
-                                title="ارسال به تلگرام"
-                                aria-disabled={!questionBookletCode}
-                                onClick={(e) => !questionBookletCode && e.preventDefault()}
-                            >
-                                <TelegramIcon className="w-6 h-6" />
-                            </a>
                         </div>
                         {isCopied && <p className="text-green-600 text-sm mt-2 text-center">کد با موفقیت کپی شد!</p>}
+                    </div>
+                    
+                    <div className="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <label className="block text-sm font-medium text-gray-700 mb-2 text-center">
+                            ارسال مستقیم به تلگرام
+                        </label>
+                        <a
+                            href={telegramLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={`flex items-center justify-center gap-2 w-full p-3 rounded-lg font-semibold transition ${
+                                !questionBookletCode
+                                ? 'bg-blue-300 opacity-50 cursor-not-allowed pointer-events-none'
+                                : 'bg-blue-500 text-white hover:bg-blue-600'
+                            }`}
+                            aria-disabled={!questionBookletCode}
+                            onClick={(e) => !questionBookletCode && e.preventDefault()}
+                        >
+                            <TelegramIcon className="w-5 h-5" />
+                            <span>ارسال کد دفترچه سوال</span>
+                        </a>
                     </div>
                 </div>
 
